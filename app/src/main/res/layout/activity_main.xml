@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_celcius"
+        style="@style/TemperatureText"
+        android:text="@string/celcius" />
+
+    <EditText
+        android:id="@+id/edit_text_celcius"
+        style="@style/TemperatureEdit"
+        android:layout_alignBaseline="@id/text_view_celcius"
+        android:layout_alignBottom="@id/text_view_celcius"
+        android:layout_toEndOf="@id/text_view_fahrenheit"
+        android:layout_toRightOf="@id/text_view_fahrenheit"
+        android:hint="@string/masukkan_nilai_celcius" />
+
+    <Button
+        android:id="@+id/button_konversi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/edit_text_kelvin"
+        android:background="@color/colorAccent"
+        android:onClick="convertSuhu"
+        android:text="KONVERSI"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/text_view_kelvin"
+        style="@style/TemperatureText"
+        android:layout_below="@id/text_view_celcius"
+        android:layout_marginTop="82dp"
+        android:text="@string/kelvin" />
+
+    <EditText
+        android:id="@+id/edit_text_kelvin"
+        style="@style/TemperatureEdit"
+        android:layout_alignBaseline="@id/text_view_kelvin"
+        android:layout_alignStart="@id/text_view_celcius"
+        android:layout_alignLeft="@id/text_view_celcius"
+        android:layout_alignBottom="@id/text_view_kelvin"
+        android:hint="@string/hasil_kelvin"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/text_view_fahrenheit"
+        style="@style/TemperatureText"
+        android:layout_alignBaseline="@id/edit_text_fahrenheit"
+        android:layout_alignBottom="@id/edit_text_fahrenheit"
+        android:text="@string/fahrenheit" />
+
+    <EditText
+        android:id="@+id/edit_text_fahrenheit"
+        style="@style/TemperatureEdit"
+        android:layout_below="@id/edit_text_kelvin"
+        android:layout_alignStart="@id/edit_text_kelvin"
+        android:layout_alignLeft="@id/edit_text_kelvin"
+        android:hint="@string/hasil_fahrenheit"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/text_view_reamur"
+        style="@style/TemperatureText"
+        android:layout_below="@id/edit_text_fahrenheit"
+        android:layout_marginTop="10dp"
+        android:text="@string/reamur" />
+
+    <EditText
+        android:id="@+id/edit_text_reamur"
+        style="@style/TemperatureEdit"
+        android:layout_alignBaseline="@id/text_view_reamur"
+        android:layout_alignStart="@id/edit_text_fahrenheit"
+        android:layout_alignLeft="@id/edit_text_fahrenheit"
+        android:layout_alignBottom="@id/text_view_reamur"
+        android:hint="@string/hasil_reamur"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
+</RelativeLayout>
